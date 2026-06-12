@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
+  title: "Julia MAra - 29/11/2025",
   description: "Julia MAra - 29/11/2025",
   icons: {
     icon: [
