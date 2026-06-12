@@ -1,26 +1,245 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #ffe4ef, #fff7fb);
+  color: #4a1f2d;
+}
+
+.container {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff8fbd, #ffc2d9);
+  border-radius: 28px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(255, 105, 160, 0.35);
+}
+
+.heart {
+  font-size: 52px;
+  animation: pulse 1.6s infinite;
+}
+
+.hero h1,
+.card h2,
+.surprise h2,
+.final h2 {
+  margin-bottom: 12px;
+}
+
+.hero p,
+.card p,
+.surprise p,
+.final p {
+  line-height: 1.6;
+}
+
+.card,
+.surprise,
+.final {
+  margin-top: 22px;
+  padding: 22px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px rgba(255, 120, 170, 0.18);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 14px;
+}
+
+.timelineItem span {
+  min-width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ff6fae;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.timelineItem h3 {
+  margin: 0 0 6px;
+  color: #d63384;
+}
+
+.timelineItem p {
+  margin: 0;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.messages p {
+  margin: 0;
+  padding: 14px;
+  background: #fff0f6;
+  border-left: 4px solid #ff6fae;
+  border-radius: 14px;
+}
+
+.muted {
+  color: #8a5a6a;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.gallery div {
+  height: 110px;
+  border-radius: 20px;
+  background: #ffe1ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.surprise {
+  text-align: center;
+  background: #fff0f6;
+}
+
+button {
+  border: none;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #ff4f9a;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(255, 79, 154, 0.35);
+}
+
+.final {
+  text-align: center;
+  background: linear-gradient(135deg, #ff8fbd, #ff5fa2);
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.photoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.photoCard {
+  background: #fff0f6;
+  border-radius: 22px;
+  padding: 14px;
+  border: 2px dashed #ff9ac2;
+}
+
+.photoPlaceholder {
+  height: 180px;
+  border-radius: 18px;
+  background: #ffd9e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.photoCard textarea {
+  width: 100%;
+  min-height: 80px;
+  border: none;
+  resize: none;
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 14px;
+  outline: none;
+  background: white;
+  color: #4a1f2d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.photoCard textarea::placeholder {
+  color: #b46b89;
+}
+
+
+.photoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.photoCard {
+  background: #fff0f6;
+  border-radius: 22px;
+  padding: 18px;
+  border: 2px dashed #ff9ac2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.imageWrapper {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.romanticImage {
+  border-radius: 18px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.romanticImage:hover {
+  transform: scale(1.03);
+}
+
+.photoDescription {
+  margin-top: 14px;
+  line-height: 1.6;
+  color: #7a3953;
+  font-size: 15px;
 }
