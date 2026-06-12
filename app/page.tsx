@@ -39,8 +39,9 @@ export default function Home() {
 
   const dataInicio = new Date("2024-01-01");
   const hoje = new Date();
-  const dias = Math.floor((hoje - dataInicio) / (1000 * 60 * 60 * 24));
-
+const dias = Math.floor(
+  (hoje.getTime() - dataInicio.getTime()) / (1000 * 60 * 60 * 24)
+);
   if (!entrou) {
   return (
     <main className="intro">
