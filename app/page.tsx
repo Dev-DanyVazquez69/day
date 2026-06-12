@@ -37,7 +37,7 @@ export default function Home() {
     setFrase(aleatoria);
   }
 
-  const dataInicio = new Date("2024-01-01");
+  const dataInicio = new Date("2025-11-29");
   const hoje = new Date();
 const dias = Math.floor(
   (hoje.getTime() - dataInicio.getTime()) / (1000 * 60 * 60 * 24)
@@ -75,7 +75,7 @@ const dias = Math.floor(
 
       <section className="hero">
         <div className="heart">💗</div>
-        <h1>Desde que te conheci...</h1>
+        <h1>Desde que te dei o primeiro beijo...</h1>
         <p>
           Meus dias ficaram mais leves, mais bonitos e com aquela vontade boa de
           viver mais momentos ao seu lado.
@@ -116,7 +116,7 @@ const dias = Math.floor(
           <p>Seu sorriso</p>
           <p>Seu jeito</p>
           <p>Nossas conversas</p>
-          <p>A paz que você transmite</p>
+          <p>Seu companheirismo</p>
         </div>
       </section>
 

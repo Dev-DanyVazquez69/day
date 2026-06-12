@@ -400,9 +400,9 @@ button {
 
 .forName {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bolder;
   letter-spacing: 1px;
   margin-bottom: 18px;
-  color: #fff5fa;
+  color: #ff0080;
   text-shadow: 0 2px 12px rgba(255,255,255,0.35);
 }
